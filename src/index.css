@@ -1,0 +1,213 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+:root {
+  --primary: #0ea5e9;
+  --primary-light: #38bdf8;
+  --bg-gradient-start: #0f172a;
+  --bg-gradient-end: #1e293b;
+  --card-bg: rgba(255, 255, 255, 0.1);
+  --card-border: rgba(255, 255, 255, 0.2);
+  --text-main: #f8fafc;
+  --text-muted: #cbd5e1;
+  --transition: all 0.3s ease;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, var(--bg-gradient-start), var(--bg-gradient-end));
+  color: var(--text-main);
+  min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+}
+
+.app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem 1rem;
+}
+
+.dashboard-container {
+  width: 100%;
+  max-width: 800px;
+  background: var(--card-bg);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid var(--card-border);
+  border-radius: 1.5rem;
+  padding: 2.5rem;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+}
+
+.dashboard-title {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+  background: linear-gradient(to right, #38bdf8, #818cf8);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.empty-state {
+  text-align: center;
+  padding: 4rem 2rem;
+  color: var(--text-muted);
+}
+
+.empty-state svg {
+  margin-bottom: 1rem;
+  opacity: 0.5;
+}
+
+@media (max-width: 640px) {
+  .dashboard-container {
+    padding: 1.5rem;
+  }
+}
+
+
+
+  .divider { display: none; }
+}
+
+
+/* MASSIVE UI OVERRIDE - DARK AURORA GLASSMORPHISM THEME */
+:root {
+  --primary: #00e5ff !important;
+  --primary-hover: #00b8d4 !important;
+  
+  --background: #0f172a !important;
+  --surface: rgba(255, 255, 255, 0.05) !important;
+  --card-bg: rgba(255, 255, 255, 0.05) !important;
+  
+  --text-main: #f8fafc !important;
+  --text-muted: #94a3b8 !important;
+  
+  --border: rgba(255, 255, 255, 0.1) !important;
+  --border-light: rgba(255, 255, 255, 0.15) !important;
+  
+  --shadow-sm: 0 4px 6px -1px rgba(0, 0, 0, 0.1) !important;
+  --shadow-md: 0 10px 15px -3px rgba(0, 0, 0, 0.2) !important;
+  --shadow-lg: 0 20px 25px -5px rgba(0, 0, 0, 0.3) !important;
+}
+
+body {
+  background: linear-gradient(135deg, #0f172a 0%, #3b0764 100%) fixed !important;
+  color: var(--text-main) !important;
+}
+
+.card, .container, .sidebar, aside {
+  background: var(--surface) !important;
+  backdrop-filter: blur(16px) !important;
+  -webkit-backdrop-filter: blur(16px) !important;
+  border: 1px solid var(--border-light) !important;
+  box-shadow: var(--shadow-md) !important;
+  border-radius: 16px !important;
+}
+
+button, .btn, a.btn {
+  background: rgba(0, 229, 255, 0.15) !important;
+  color: var(--primary) !important;
+  border: 1px solid rgba(0, 229, 255, 0.4) !important;
+  border-radius: 8px !important;
+  box-shadow: 0 0 10px rgba(0, 229, 255, 0.1) !important;
+  transition: all 0.3s ease !important;
+}
+
+button:hover, .btn:hover, a.btn:hover {
+  background: var(--primary) !important;
+  color: #000000 !important;
+  box-shadow: 0 0 20px rgba(0, 229, 255, 0.4) !important;
+  transform: translateY(-2px);
+}
+
+.navbar, .header, header, nav {
+  background: rgba(15, 23, 42, 0.6) !important;
+  backdrop-filter: blur(12px) !important;
+  border-bottom: 1px solid var(--border) !important;
+}
+
+.navbar a, .header a, header a, nav a {
+  color: var(--text-main) !important;
+}
+
+.navbar a:hover, .header a:hover, header a:hover, nav a:hover {
+  color: var(--primary) !important;
+}
+
+input, textarea, select {
+  background: rgba(0, 0, 0, 0.2) !important;
+  color: var(--text-main) !important;
+  border: 1px solid var(--border) !important;
+  border-radius: 8px !important;
+}
+
+input:focus, textarea:focus, select:focus {
+  border-color: var(--primary) !important;
+  box-shadow: 0 0 0 2px rgba(0, 229, 255, 0.2) !important;
+  outline: none !important;
+}
+
+/* Custom Floating Footer Styling */
+#root {
+  min-height: calc(100vh - 120px);
+  padding-bottom: 40px;
+}
+.custom-assignment-footer {
+  position: relative;
+  margin: 3rem auto 1rem;
+  max-width: 900px;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  color: #f8fafc;
+  padding: 1.5rem 2rem;
+  text-align: center;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+}
+.footer-content {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+.university-name {
+  font-size: 1.25rem;
+  font-weight: 800;
+  letter-spacing: 2px;
+  background: linear-gradient(90deg, #00e5ff, #df00ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.student-details {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #e2e8f0;
+}
+.academic-details {
+  font-size: 0.9rem;
+  color: #cbd5e1;
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+.divider {
+  opacity: 0.3;
+  margin: 0 0.5rem;
+}
+@media (max-width: 600px) {
+  .custom-assignment-footer { margin: 2rem 1rem 1rem; border-radius: 12px; }
+  .academic-details { flex-direction: column; gap: 0.25rem; }
+  .divider { display: none; }
+}

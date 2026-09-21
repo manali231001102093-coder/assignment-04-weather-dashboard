@@ -1,0 +1,141 @@
+.weather-card {
+  animation: fadeIn 0.5s ease-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.weather-main {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.location-info {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.location-icon {
+  color: var(--primary-light);
+}
+
+.city-name {
+  font-size: 2.5rem;
+  font-weight: 600;
+  letter-spacing: -0.5px;
+}
+
+.temp-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.temp-main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: -1rem;
+}
+
+.weather-icon {
+  width: 150px;
+  height: 150px;
+  filter: drop-shadow(0 10px 15px rgba(0, 0, 0, 0.2));
+}
+
+.temp-value {
+  font-size: 5.5rem;
+  font-weight: 700;
+  line-height: 1;
+  background: linear-gradient(180deg, #fff 0%, rgba(255, 255, 255, 0.7) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.temp-value span {
+  font-size: 2.5rem;
+  vertical-align: super;
+}
+
+.weather-description {
+  font-size: 1.5rem;
+  text-transform: capitalize;
+  margin-top: -1rem;
+  margin-bottom: 0.5rem;
+  color: var(--primary-light);
+  font-weight: 500;
+}
+
+.feels-like {
+  color: var(--text-muted);
+  font-size: 1.1rem;
+}
+
+.weather-details-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+}
+
+.detail-card {
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 1rem;
+  padding: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  transition: var(--transition);
+}
+
+.detail-card:hover {
+  background: rgba(0, 0, 0, 0.3);
+  transform: translateY(-2px);
+}
+
+.detail-icon {
+  padding: 1rem;
+  border-radius: 1rem;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.detail-icon.humidity { color: #38bdf8; }
+.detail-icon.wind { color: #a78bfa; }
+.detail-icon.sun { color: #fbbf24; }
+
+.detail-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.detail-label {
+  color: var(--text-muted);
+  font-size: 0.9rem;
+  margin-bottom: 0.25rem;
+}
+
+.detail-value {
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+@media (max-width: 576px) {
+  .weather-details-grid {
+    grid-template-columns: 1fr;
+  }
+  .city-name {
+    font-size: 2rem;
+  }
+  .temp-value {
+    font-size: 4rem;
+  }
+  .weather-icon {
+    width: 120px;
+    height: 120px;
+  }
+}
